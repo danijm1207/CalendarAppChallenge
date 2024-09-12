@@ -31,6 +31,9 @@ class Event:
         self.reminders: list[Reminder] = []
         self.id: str = field(default_factory=generate_unique_id)
 
+    def add_reminder(self, date_time: datetime, type_: str = Reminder.EMAIL):
+        reminder = Reminder(date_time=date_time, type=type_)
+        self.reminders.append(reminder)
 
 
         

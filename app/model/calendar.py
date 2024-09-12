@@ -18,8 +18,34 @@ class Reminder:
 
     def __str__(self) -> str:
         return f"Reminder on {self.date_time} of type {type}"
+    
+    
+class Event:
+    
+    def __init__(self, title: str, description: str, date_: date, start_at: time, end_at: time):
+        self.title: str = title
+        self.description: str = description
+        self.date_: date = date_
+        self.start_at: time = start_at
+        self.end_at: time = end_at
+        self.reminders: list[Reminder] = []
+        self.id: str = field(default_factory=generate_unique_id)
 
 
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
 
 
 
